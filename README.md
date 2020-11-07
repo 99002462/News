@@ -8,7 +8,7 @@ Features:-
 5.Dynamic currency exchange rates
 6.Used Retrofit Network
 # Hello :wave:
-Welcome to **All in One** Project. It is a general perpous app.<br/>
+Welcome to **All in One** Project. It is a general app.<br/>
 It uses many APIs to display information. It shows country specific new, weather of current location, movies rating, currency exchange rate, and memes<br />
 ## Technology/ Stack used :mortar_board:
 - Java 
