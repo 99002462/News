@@ -1,62 +1,257 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layoutLinear"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/wind"
     android:orientation="vertical"
-    android:background="@color/colorPrimaryLight"
-    tools:context=".memeFile.StartupActivity">
+    tools:context=".weatherFile.WeatherActivity">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/startupToolbar"
+        android:id="@+id/weatherToolbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        app:titleTextColor="@color/colorPrimaryLight"
+        android:background="@color/transparentColor"
         android:elevation="6dp"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"/>
-
-    <ImageView
-        android:id="@+id/memeIV"
-        android:layout_width="match_parent"
-        android:layout_height="500dp"
-        android:layout_below="@id/startupToolbar"
-        tools:srcCompat="@tools:sample/avatars"
-        android:layout_margin="20dp" />
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:titleTextColor="@color/colorPrimaryLight" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/memeIV"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginRight="20dp"
         android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/shareBtn"
+        <TextView
+            android:id="@+id/txt_temp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:layout_marginRight="5dp"
-            android:background="#3498DB"
-            android:textColor="@color/colorWhite"
-            android:text="Share" />
+            android:layout_weight="2"
+            android:text="37 °C"
+            android:textColor="@color/colorDark"
+            android:textSize="50dp" />
 
-        <Button
-            android:id="@+id/nextBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/img_weather"
+            android:layout_width="135dp"
+            android:layout_height="70dp"
             android:layout_weight="1"
-            android:layout_marginLeft="5dp"
-            android:background="#1ABC9C"
-            android:textColor="@color/colorWhite"
-            android:text="Next" />
+            android:src="@drawable/cloudy" />
 
     </LinearLayout>
 
+    <TextView
+        android:id="@+id/txt_main"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="In India"
+        android:textColor="@color/colorDark"
+        android:textSize="24sp" />
 
+    <TextView
+        android:id="@+id/txt_description"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:text="@string/weather"
+        android:textColor="@color/colorDark"
+        android:textSize="24sp" />
 
-</RelativeLayout>
+    <TextView
+        android:id="@+id/txt_city"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="Raipur"
+        android:textColor="@color/colorDark"
+        android:textSize="32dp"
+        android:textStyle="bold" />
+
+    <TableLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:padding="5dp">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Wind"
+                android:textColor="@color/colorDark"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/windTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_column="1"
+                android:background="@drawable/border_table"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:text="Speed: 1 Deg: 1 "
+                android:textColor="@color/colorDark"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/pressure"
+                android:textColor="@color/colorDark"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/pressureTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_table"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:text="1012.75 hpa"
+                android:textColor="@color/colorDark"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Geo Coord "
+                android:textColor="@color/colorDark"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/geoCoordTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_table"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:text="32.0, 81.0"
+                android:textColor="@color/colorDark"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="humidity"
+                android:textColor="@color/colorDark"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/humidityTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_table"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:text="100 %"
+                android:textColor="@color/colorDark"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Sunrise"
+                android:textColor="@color/colorDark"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sunriseTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_table"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:text="00:00"
+                android:textColor="@color/colorDark"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="@string/sunset"
+                android:textColor="@color/colorDark"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/sunsetTv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/border_table"
+                android:gravity="left"
+                android:paddingLeft="10dp"
+                android:text=""
+                android:textColor="@color/colorDark"
+                android:textSize="24dp"
+                android:textStyle="bold" />
+
+        </TableRow>
+    </TableLayout>
+</LinearLayout>
