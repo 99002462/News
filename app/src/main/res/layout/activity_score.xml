@@ -37,7 +37,7 @@
         android:layout_centerHorizontal="true"
         android:layout_margin="10dp"
         android:fontFamily="@font/bevan"
-        android:text="Search Movie and \n     TV shows here"
+        android:text="@string/movie"
         android:textColor="@color/colorBlack"
         android:textSize="24dp" />
 
@@ -48,7 +48,7 @@
             android:layout_below="@id/textview"
             android:minWidth="200dp"
             android:layout_centerHorizontal="true"
-            android:hint="Search ex. Tenet"
+            android:hint="searching"
             android:gravity="center"
             android:background="@drawable/shape_rect_white"
             android:textSize="24dp"/>
@@ -60,7 +60,7 @@
         android:layout_below="@id/searchEt"
         android:layout_margin="10dp"
         android:layout_centerHorizontal="true"
-        android:text="Search"
+        android:text="@string/searchs"
         android:textColor="@color/colorWhite"
         android:textStyle="bold"
         android:background= "@drawable/shape_rect" />
