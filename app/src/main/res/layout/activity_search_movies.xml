@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:background="@drawable/shape_rect_white"
         android:layout_margin="5dp"
-        android:text="Search"
+        android:text="@string/search"
         android:queryHint="Search Here"
         android:iconifiedByDefault="false"
         android:imeOptions="actionSearch"
